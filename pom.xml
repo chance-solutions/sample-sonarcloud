@@ -7,9 +7,9 @@
 	<groupId>com.sample.sonarcloud</groupId>
 	<artifactId>sample-sonarcloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>sample-sonarcloud</packaging>
+	<packaging>pom</packaging>
 
-	<name>demo</name>
+	<name>sample-sonarcloud</name>
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
