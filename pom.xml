@@ -7,7 +7,7 @@
 	<groupId>com.sample.sonarcloud</groupId>
 	<artifactId>sample-sonarcloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>sample-sonarcloud</packaging>
 
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
@@ -16,4 +16,14 @@
 		<module>common</module>
 		<module>service</module>
 	</modules>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<!-- sonar.scanner.force-deprecated-java-version>true</sonar.scanner.force-deprecated-java-version -->
+		<sonar.projectKey>chance-solutions_sample-sonarcloud</sonar.projectKey>
+		<sonar.organization>chance-solutions</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.moduleKey>${project.groupId}:${project.artifactId}</sonar.moduleKey>
+	</properties>
 </project>
