@@ -1,11 +1,9 @@
 # Sample Sonarcloud
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=chance-solutions_sample-sonarcloud&metric=alert_status)](https://sonarcloud.io/dashboard?id=chance-solutions_sample-sonarcloud)
-
-```
-SONAR_TOKEN:*
-$ mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dmaven.test.skip=true
-```
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=chance-solutions_sample-sonarcloud&metric=code_smells)](https://sonarcloud.io/dashboard?id=chance-solutions_sample-sonarcloud)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=chance-solutions_sample-sonarcloud&metric=coverage)](https://sonarcloud.io/dashboard?id=chance-solutions_sample-sonarcloud)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=chance-solutions_sample-sonarcloud&metric=security_rating)](https://sonarcloud.io/dashboard?id=chance-solutions_sample-sonarcloud)
 
 Update your pom.xml file with the following properties:
 ```
@@ -32,4 +30,10 @@ sonarcloud-check:
     - merge_requests
     - master
     - develop
+```
+
+Manual run
+```
+SONAR_TOKEN:*
+$ mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dmaven.test.skip=true
 ```
