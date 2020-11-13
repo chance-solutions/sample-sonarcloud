@@ -1,11 +1,13 @@
 variables:
   SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
   GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
 sonarcloud-check:
   image: maven:3.6.3-jdk-11-slim
   cache:
     paths:
-      - .sonar/cache
+      - .sonar/cache/
+      - .m2/repository/
   script:
     - mvn clean package -Dmaven.test.skip=true
     - mvn verify sonar:sonar -Dmaven.test.skip=true
