@@ -14,7 +14,7 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - run: sonar-scanner -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectVersion=$(date +%Y-%m)
